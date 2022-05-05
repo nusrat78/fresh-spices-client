@@ -1,6 +1,6 @@
 import React from 'react';
 import CustomLink from '../CustomLink/CustomLink';
-import logo from '../../images/logo.png';
+import logo from '../../images/Logo/logo.png';
 import './Header.css'
 
 
