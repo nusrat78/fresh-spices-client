@@ -1,10 +1,13 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home/Home/Home';
-import Blogs from './components/Blogs/Blogs';
+import Blogs from './components/Blogs/Blogs/Blogs';
 import Notfound from './components/NotFound/Notfound';
 import Headers from './components/Headers/Headers';
 import Inventories from './components/Home/Inventories/Inventories';
+import Login from './components/Login/Login/Login';
+import Register from './components/Register/Register/Register';
+
 
 function App() {
   return (
@@ -14,6 +17,8 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/inventories" element={<Inventories></Inventories>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/register' element={<Register></Register>}></Route>
         <Route path="*" element={<Notfound></Notfound>}></Route>
       </Routes>
     </div>

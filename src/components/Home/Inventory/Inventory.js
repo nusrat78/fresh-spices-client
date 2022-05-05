@@ -8,7 +8,7 @@ const Inventory = ({ inventory }) => {
             <h2>{name}</h2>
             <p>Price:${price}</p>
             <p><small>{description}</small></p>
-            <button>view details</button>
+            <button>Update</button>
         </div>
     );
 };
