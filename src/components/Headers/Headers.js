@@ -2,23 +2,38 @@ import React from 'react';
 import CustomLink from '../CustomLink/CustomLink';
 import logo from '../../images/Logo/logo.png';
 import './Header.css'
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
 
 const Headers = () => {
     return (
-        <nav className='header'>
-            <div className='header-img'>
-                <img src={logo} alt=""></img>
-            </div>
-            <div className='nabvar'>
-                <CustomLink to="/">Home</CustomLink>
-                <CustomLink to="/inventory">Inventory</CustomLink>
-                <CustomLink to="/blogs">Blogs</CustomLink>
-                <CustomLink to='/login'>Login</CustomLink>
-                <CustomLink to='/register'>Register</CustomLink>
-            </div>
 
-        </nav>
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Container>
+                <img src={logo} alt=""></img>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="me-auto">
+                        <Nav.Link href="#features">Features</Nav.Link>
+                        <Nav.Link href="#pricing">Pricing</Nav.Link>
+                        <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                        </NavDropdown>
+                    </Nav>
+                    <Nav>
+                        <Nav.Link href="#deets">More deets</Nav.Link>
+                        <Nav.Link eventKey={2} href="#memes">
+                            Dank memes
+                        </Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
+
     );
 };
 
