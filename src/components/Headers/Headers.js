@@ -1,33 +1,28 @@
 import React from 'react';
-import CustomLink from '../CustomLink/CustomLink';
 import logo from '../../images/Logo/logo.png';
 import './Header.css'
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 
 const Headers = () => {
     return (
 
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect expand="lg" sticky='top' variant="dark" bg='success'>
             <Container>
-                <img src={logo} alt=""></img>
+                <img height={80} src={logo} alt=""></img>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto">
-                        <Nav.Link href="#features">Features</Nav.Link>
-                        <Nav.Link href="#pricing">Pricing</Nav.Link>
-                        <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                        </NavDropdown>
-                    </Nav>
-                    <Nav>
-                        <Nav.Link href="#deets">More deets</Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
-                            Dank memes
+                <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
+                    <Nav >
+                        <Nav.Link as={Link} to="/">Home</Nav.Link>
+                        <Nav.Link as={Link} to="/blogs">
+                            Blog
+                        </Nav.Link>
+                        <Nav.Link as={Link} to="/login">
+                            Login
+                        </Nav.Link>
+                        <Nav.Link as={Link} to="/register">
+                            Register
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

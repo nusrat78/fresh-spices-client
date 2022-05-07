@@ -3,6 +3,7 @@ import './EmailRegister.css';
 import app from '../../../firebase.init';
 import { createUserWithEmailAndPassword, getAuth, sendEmailVerification, updateProfile } from 'firebase/auth';
 import { Button, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const auth = getAuth(app);
 
@@ -95,9 +96,11 @@ const EmailRegister = () => {
                     </Form.Control.Feedback>
                 </Form.Group>
                 <p>{error}</p>
-                <Button variant="primary" type="submit">
+
+                <Button variant="primary" type="submit" className='d-block mx-auto'>
                     Register
                 </Button>
+                <p>Already have an account? <Link to="/login" className='text-danger'>Please login</Link></p>
             </Form>
         </div>
     );

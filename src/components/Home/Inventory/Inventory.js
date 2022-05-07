@@ -1,14 +1,19 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Inventory = ({ inventory }) => {
-    const { name, img, description, price } = inventory;
+    const { id, name, img, description, price } = inventory;
+    const navigate = useNavigate();
+    const navigateDetail = id => {
+        navigate(`/inventory/${id}`);
+    }
     return (
         <div>
             <img src={img} alt=""></img>
             <h2>{name}</h2>
             <p>Price:${price}</p>
             <p><small>{description}</small></p>
-            <button>Update</button>
+            <button onClick={() => navigateDetail(id)}>Update</button>
         </div>
     );
 };

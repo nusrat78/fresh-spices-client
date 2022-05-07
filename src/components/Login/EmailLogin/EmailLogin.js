@@ -3,6 +3,7 @@ import app from '../../../firebase.init';
 import { Button, Form } from 'react-bootstrap';
 import './EmailLogin.css'
 import { signInWithEmailAndPassword, getAuth, sendPasswordResetEmail } from 'firebase/auth';
+import { Link } from 'react-router-dom';
 
 
 const auth = getAuth(app);
@@ -70,11 +71,11 @@ const EmailLogin = () => {
                 <Button onClick={handlePasswordReset} variant="link">Forgot Password?</Button>
                 <br></br>
                 <p>{error}</p>
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit" className='d-block mx-auto'>
                     Login
                 </Button>
             </Form>
-            <p>New to Fresh spices? <span className='text-danger'>Please Register</span></p>
+            <p>New to Fresh spices? <Link to="/register" className='text-danger'>Please Register</Link></p>
         </div>
 
     );

@@ -13,8 +13,7 @@ const Banner = () => {
     return (
         <Carousel activeIndex={index} onSelect={handleSelect}>
             <Carousel.Item>
-                <img
-                    className="d-block w-100"
+                <img height={400} className="d-block w-100"
                     src={Banner1}
                     alt="first slide"
                 />
@@ -23,7 +22,7 @@ const Banner = () => {
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                <img
+                <img height={400}
                     className="d-block w-100"
                     src={Banner2}
                     alt="Second slide"
