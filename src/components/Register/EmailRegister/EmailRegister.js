@@ -63,9 +63,10 @@ const EmailRegister = () => {
     const verifyEmail = () => {
         sendEmailVerification(auth.currentUser)
             .then(() => {
-                console.log('email verification sent');
+                console.log('hello');
             })
     }
+
     return (
         <div className='container w-50 mx-auto'>
             <h2 className='form-header'>Please Register</h2>
