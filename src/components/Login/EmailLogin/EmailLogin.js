@@ -2,16 +2,18 @@ import React, { useState } from 'react';
 import app from '../../../firebase.init';
 import { Button, Form } from 'react-bootstrap';
 import './EmailLogin.css'
-import { signInWithEmailAndPassword, getAuth, sendPasswordResetEmail } from 'firebase/auth';
-import { Link } from 'react-router-dom';
+import { signInWithEmailAndPassword, sendPasswordResetEmail } from 'firebase/auth';
+import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
 
 
-const auth = getAuth(app);
+// const auth = getAuth(app);
 
 const EmailLogin = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const navigate = useNavigate();
 
     const handleEmailBlur = event => {
         setEmail(event.target.value);
@@ -35,6 +37,7 @@ const EmailLogin = () => {
                 console.log(user);
                 setEmail('');
                 setPassword('');
+                navigate('/')
             })
             .catch(error => {
                 console.error(error);

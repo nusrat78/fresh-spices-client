@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import google from '../../../images/Logo/Google.png';
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
+import auth from '../../../firebase.init';
 
-const auth = getAuth();
+// const auth = getAuth();
 
 const GoogleRegister = () => {
     const [user, setUser] = useState({});

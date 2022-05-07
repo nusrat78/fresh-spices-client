@@ -3,14 +3,16 @@ import './EmailRegister.css';
 import app from '../../../firebase.init';
 import { createUserWithEmailAndPassword, getAuth, sendEmailVerification, updateProfile } from 'firebase/auth';
 import { Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
 
-const auth = getAuth(app);
+// const auth = getAuth(app);
 
 
 const EmailRegister = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
     const [error, setError] = useState('');
     const [name, setName] = useState('');
 
@@ -64,8 +66,12 @@ const EmailRegister = () => {
         sendEmailVerification(auth.currentUser)
             .then(() => {
                 console.log('hello');
+                if (verifyEmail) {
+                    navigate('/');
+                }
             })
     }
+
 
     return (
         <div className='container w-50 mx-auto'>
