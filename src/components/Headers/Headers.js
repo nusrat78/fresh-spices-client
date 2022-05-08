@@ -26,24 +26,35 @@ const Headers = () => {
                         <Nav.Link as={Link} to="/blogs">
                             Blog
                         </Nav.Link>
+                        {user && <>
+                            <Nav.Link as={Link} to="/manageItem">
+                                ManageItem
+                            </Nav.Link>
+                            <Nav.Link as={Link} to="/addItem">
+                                AddItem
+                            </Nav.Link>
+
+
+
+                        </>}
                         {
                             user ?
                                 <button onClick={handleSignOut}>Sign out</button>
-                                :
-                                <Nav.Link as={Link} to="/login">
+                                : <> <Nav.Link as={Link} to="/login">
                                     Login
                                 </Nav.Link>
+                                    <Nav.Link as={Link} to="/register">
+                                        Register
+                                    </Nav.Link></>
 
                         }
 
 
-                        <Nav.Link as={Link} to="/register">
-                            Register
-                        </Nav.Link>
+
                     </Nav>
                 </Navbar.Collapse>
             </Container>
-        </Navbar>
+        </Navbar >
 
     );
 };

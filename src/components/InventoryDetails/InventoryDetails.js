@@ -14,7 +14,11 @@ const InventoryDetails = () => {
     return (
         <div>
             <img src={item.img} alt="" />
-            <h2>{item.name}</h2>
+            <h2>Name:{item.name}</h2>
+            <p>Price:${item.price}</p>
+            <p>Quantity:{item.quantity}</p>
+            <p>Supplier Name:{item.supplier}</p>
+            <p><small>Description:{item.description}</small></p>
         </div>
     );
 };

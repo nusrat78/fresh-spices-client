@@ -4,8 +4,8 @@
         "price": 145.00,
         "description": "This powder adds spice to any application, without bringing in additional smoky or fruity flavors like other peppers do. Great in spicy Chinese or Korean sauces, or to make snack foods flaming hot. ",
         "img": "https://i.ibb.co/G2nFJV2/chilipowder.webp",
-        "quantity": "",
-        "supplier name": ""
+        "quantity": "340",
+        "suppliername": "Herb and spices"
     },
     {
         "name": "TURMERIC POWDER",
@@ -13,7 +13,7 @@
         "description": "Turmeric grows naturally in open forests of India and parts of Asia. While the exact location is disputed, turmeric is believed to have originated from western and southern India.",
         "img": "https://i.ibb.co/2tt6BKf/turmeric-powder.webp",
         "quantity": "",
-        "supplier name": ""
+        "suppliername": ""
     },
     {
         "name": "CUMIN",
@@ -21,7 +21,7 @@
         "description": "Cumin is the dried white fruit with greyish brown colour of the small slender herb Cuminum cyminum, a member of the parsley family (umbelliferae). The name is derived from the ancient Persian city Kerman, where cumin was produced.",
         "img": "https://i.ibb.co/2c5XDVg/cumin.webp",
         "quantity": "",
-        "supplier name": ""
+        "suppliername": ""
     },
     {
         "name": "GARLIC POWDER",
@@ -29,7 +29,7 @@
         "description": "Garlic Powder Special 1MM is an easy and convenient way to add fresh garlic flavor without texture or piece identity to coatings, broths, marinades, soups or stews.",
         "img": "https://i.ibb.co/Gp17BCG/garlicpowder.webp",
         "quantity": "",
-        "supplier name": ""
+        "suppliername": ""
     },
     {
         "name": "PAPRIKA",
@@ -37,7 +37,7 @@
         "description": "Paprika is made from varieties of the plant Capsicum annuum. It’s origins can be traced to the Antilles Islands, Central America and southern Mexico, where it has been cultivated for centuries. ",
         "img": "https://i.ibb.co/tQDTzYj/paprika.webp",
         "quantity": "",
-        "supplier name": ""
+        "suppliername": ""
     },
     {
         "name": "CINAMON",
@@ -45,6 +45,6 @@
         "description": "There are several different species of cinnamon that make up the world’s supply including  “Cassia” which is most commonly sold in the United States and Canada. ",
         "img": "https://i.ibb.co/bWqDtFv/cinamon.webp",
         "quantity": "",
-        "supplier name": ""
+        "suppliername": ""
     }
 ]

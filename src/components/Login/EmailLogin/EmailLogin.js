@@ -3,7 +3,7 @@ import app from '../../../firebase.init';
 import { Button, Form } from 'react-bootstrap';
 import './EmailLogin.css'
 import { signInWithEmailAndPassword, sendPasswordResetEmail } from 'firebase/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 
 
@@ -13,7 +13,10 @@ const EmailLogin = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const location = useLocation();
     const navigate = useNavigate();
+
+    const from = location?.state?.from?.pathname || '/';
 
     const handleEmailBlur = event => {
         setEmail(event.target.value);
@@ -37,7 +40,7 @@ const EmailLogin = () => {
                 console.log(user);
                 setEmail('');
                 setPassword('');
-                navigate('/')
+                navigate(from, { replace: true })
             })
             .catch(error => {
                 console.error(error);
